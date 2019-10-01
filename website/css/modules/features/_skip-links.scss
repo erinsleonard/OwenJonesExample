@@ -1,0 +1,18 @@
+// Skip Link
+// -----------------------------------------------------------------------------
+.skip-link,
+.sitemap-link {
+  color: $color-white;
+  display: block;
+  height: 0;
+  text-indent: -9999px;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: $color-white;
+    display: inline-block;
+    height: auto;
+    text-indent: 0;
+  }
+}

@@ -1,0 +1,135 @@
+// Connect with a Partner form
+
+// input:disabled, textarea:disabled, select:disabled, .form-disabled * {
+//   pointer-events: none;
+// }
+input:disabled, textarea:disabled, select:disabled, .form-disabled button[type=submit] {
+  pointer-events: none;
+}
+
+.contact--surface-group {
+  @include element-invisible();
+}
+
+.contact--form-primary.contact--form-primary--connect-partner {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  margin-bottom: 4.5rem;
+  padding-bottom: 4.5rem;
+  font-size: 18px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 8rem;
+    padding-bottom: 8rem;
+  }
+  label {
+    font-weight: normal;
+  }
+}
+
+.contact--form-secondary.contact--form-secondary--connect-partner {
+  @include clearfix();
+  margin-bottom: 2rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.contact--name-group.contact--name-group--connect-partner {
+  @include clearfix();
+  padding: 0;
+  width: 100%;
+}
+
+.contact--email-group.contact--email-group--connect-partner,
+.contact--first-name-group.contact--first-name-group--connect-partner {
+  float: left;
+  padding-left: 0;
+  padding-right: $gutter-side-tile;
+  width: 50%;
+}
+
+.contact--last-name-group.contact--last-name-group--connect-partner,
+.contact--phone-group.contact--phone-group--connect-partner {
+  float: left;
+  padding-left: $gutter-side-tile;
+  width: 50%;
+}
+
+.contact--info-group.contact--info-group--connect-partner {
+  @include clearfix();
+}
+
+.contact--budget-group-item {
+  float: left;
+  width: calc(50% - #{$gutter-side-tile});
+}
+
+.contact--budget-group-item.contact--max-budget-group {
+  float: right;
+  width: calc(50% - #{$gutter-side-tile});  
+}
+
+.page-title--intro--contact.page-title--intro--contact--connect-parnter-additional-info {
+  margin-bottom: 2em;
+}
+.page-title--intro--contact--connect-parnter-additional-info-submit-message {
+  p {
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.contact--question-group.contact--question-group--connect-partner {
+  textarea {
+    min-height: 18rem;
+  }
+}
+.this-looks-light-gray {
+  color: #C6C6C6;
+}
+
+
+#externalModal {
+  .modal-dialog {
+    max-width: 681px;
+  }
+}
+.external_message {
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 11px;
+}
+.carpet-padding-image {
+  max-width: 371px;
+  margin-bottom: 9px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.surface-external-link {
+  margin-top: 24px;
+}
+.external_message {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+// Thank you page
+
+.connect-partner--thank-you-img {
+  margin-bottom: 3.5rem;
+  text-align: center;
+
+  img {
+    max-width: 28rem;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 50px;
+  }
+}

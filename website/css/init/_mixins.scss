@@ -1,0 +1,160 @@
+// Mixins
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin base-headers() {
+  font-family: $font-trade-gothic-bold-condensed;
+  letter-spacing: $header-letter-spacing;
+  line-height: 0.9em;
+  text-transform: uppercase;
+}
+
+@mixin btn($bg-color: $color-black, $text-color: $color-white) {
+  background-color: $bg-color;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: $text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-trade-gothic-bold-condensed;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.375em;
+  letter-spacing: $header-letter-spacing; 
+  margin-bottom: 0;
+  padding: 1.1em 1.65em 0.7em 1.7em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  // IE FIXES FOR NIKE FONT
+  @media all and (-ms-high-contrast:none) {
+     /* IE10 */
+      padding: 0.7em 1.65em 0.7em 1.65em;
+  }
+  // MS EDGE
+  @supports (-ms-ime-align: auto) {
+     padding: 0.7em 1.65em 0.7em 1.65em;
+  }
+
+  &:hover {
+    color: $color-body;
+    background-color: #e6e6e6;
+    text-decoration: none;
+  }
+  &:focus  {
+    color: $text-color;
+    background-color: $bg-color;
+    text-decoration: none;
+  }
+  &:active {
+    color: $text-color;
+    background-color: $bg-color !important;
+    text-decoration: none;
+  }
+}
+
+
+.btn-primary {
+  @include btn();
+}
+
+.btn-secondary {
+  @include btn($color-fresh-turf, $color-body);
+}
+
+@mixin section--title {
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  padding-top: .25em;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 0.35em;
+  }
+}
+
+@mixin fancy-select() {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: $color-gray-light;
+    background-image: url('../images/arrow-down-gray.png');
+    background-position: right 1em center;
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: $font-trade-gothic-bold-condensed;
+    font-size: 13px;
+    // letter-spacing: 0.03em;
+    letter-spacing: 0em;
+    margin-bottom: 1.5rem;
+    padding: 1em 3em 1em 1em;
+    text-transform: uppercase;
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+      background-size:  23px auto;
+      font-size: 20px;
+    }
+  }
+}
+
+@mixin fancy-textfield() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid rgb(205, 210, 214);
+  color: $color-body;
+  font-size: 13px;
+  // letter-spacing: 0.03em;
+  letter-spacing: 0em;
+  line-height: 1em;
+  margin-bottom: 1.5rem;
+  padding: 1em;
+  width: 100%;
+
+  &:focus {
+    color: $color-body;
+  }
+
+  &::placeholder {
+    color: #CCC;
+    opacity: 1 !important;
+    text-transform: uppercase;
+  }
+
+  &[disabled] {
+    &::placeholder { 
+      color: rgb(150, 150, 150);
+    }
+  }  
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 18px;
+  }
+}

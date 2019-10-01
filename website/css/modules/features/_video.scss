@@ -1,0 +1,97 @@
+// Site videos
+
+.ombuassets-video {
+  margin-bottom: 1.5em;
+
+  position: relative;
+
+  .modal & {
+    margin-bottom: 0;
+  }
+  .video-play-button-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+
+
+  }
+  .video-play-button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #FFF;
+    display: inline-block;
+    transition: all .5s ease;
+
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.25), inset 1px 1px 3px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.25), inset 1px 1px 3px 0px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.25), inset 1px 1px 3px 0px rgba(0,0,0,0.25);
+
+    .video-play-button--circle {
+      border-radius: 50%;
+      background: #000;
+      position: relative;
+      border: 2px solid #FFF;
+      width: 24px;
+      height: 24px;
+      margin: 12px 25px;
+      position: relative;
+
+      -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.25), inset 0px 0px 0px .1px rgba(255,255,255,1);
+      -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.25), inset 0px 0px 0px .1px rgba(255,255,255,1);
+      box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.25), inset 0px 0px 0px .1px rgba(255,255,255,1);
+
+
+    }
+    .video-play-button--circle-arrow {
+      position: absolute;
+      
+      top: 50%;
+      transform: translateY(-50%) translateX(50%);
+      border: 0;
+      background: transparent;
+      box-sizing: border-box;
+      width: 0;
+      height: 8px;
+
+      border-color: transparent transparent transparent #FFF;
+      transition: 100ms all ease;
+      cursor: pointer;
+
+      border-style: solid;
+      border-width: 4px 0 4px 8px;
+      left: 3px;
+
+
+    }
+  }
+  a:hover {
+    .video-play-button {
+      background:rgba(0,0,0,.5);
+    }
+  }
+}
+
+.aspect-ratio-box {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  .aspect-prop {
+    display: block;
+    position: relative;
+
+    & + * {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}  

@@ -1,0 +1,22 @@
+// 
+// Layout
+//
+// Layout structure
+//
+
+.container {
+  max-width: 100%;
+  padding-left: $gutter-side-mobile;
+  padding-right: $gutter-side-mobile;
+  width: $max-site-width;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-left: $gutter-side-tablet;
+    padding-right: $gutter-side-tablet;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-left: $gutter-side-desktop;
+    padding-right: $gutter-side-desktop;
+  }
+}

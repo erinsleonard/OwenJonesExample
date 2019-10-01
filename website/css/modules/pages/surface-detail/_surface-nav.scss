@@ -1,0 +1,87 @@
+// Surface nav
+
+.surface--nav {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-light;
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: $header-desktop-height;
+  z-index: 3;  
+  width: 100%;
+  
+  @media (max-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+body.user-authenticated  {
+  .surface--nav {
+    top: 132px;
+  }
+}
+// IE HACKS
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+
+}
+@supports (-ms-ime-align: auto) { // MS EDGE
+
+}
+
+.surface--nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  max-width: 1080px;
+}
+
+.surface--nav-item {
+  display: inline-block;
+  // flex: 0 1 auto;
+  flex: 1 0 auto;
+}
+
+.surface--nav-link {
+  border-bottom: 4px solid transparent;
+  color: rgb(102, 102, 102);
+  display: block;
+  font-size: 18px;
+  line-height: 1em;
+  padding: 2.4rem 2rem;
+  text-decoration: none;
+
+  &:after {
+    content: "|";
+    cursor: default;
+    content: "";
+    left: 4rem;
+    pointer-events: none;
+    position: relative;    
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    border-color: $color-gray-dark;
+    text-decoration: none;
+  }
+}
+
+.surface--nav-separator {
+  color: rgb(102, 102, 102);  
+  display: block;
+  flex: 1 1 auto;
+  font-size: 18px;
+  line-height: 1.2;
+  max-width: 4rem;
+  padding: 2.4rem 0;
+
+  &:last-of-type {
+    display: none;
+  }
+}

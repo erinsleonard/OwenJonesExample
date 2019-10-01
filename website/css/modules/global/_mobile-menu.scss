@@ -1,0 +1,145 @@
+// Mobile menu
+
+.mobile-menu--nav-li {
+
+  @media (max-width: $breakpoint-notebook) {
+    display: block;
+  }
+}
+
+.mobile-menu--nav-li-inner {
+  position: relative;
+}
+
+.mobile-menu--nav-item {
+
+  @media (max-width: $breakpoint-notebook) {
+    background-color: rgb(247, 247, 247);
+    border-bottom: 1px solid $color-gray-light;
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 1.7rem 2.5rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.mobile-menu--nav-item.mobile-menu--nav-submenu-back {
+  background-color: $color-white;
+  padding-left: 5.5rem;
+  position: relative;
+
+  &:before {
+    background-image: url('../images/arrow-right-black.png');
+    background-repeat: no-repeat;
+    background-position: 2rem center;
+    background-size: 7px 11px;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+    width: 5.5rem;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+.mobile-menu--nav-item.mobile-menu--nav-item--expanded {
+  @media (max-width: $breakpoint-notebook) {
+    padding-right: $mobile-menu-mobile-submenu-toggle-width;
+
+    &.open {
+      background-color: $color-white;
+      padding-right: 2.5rem;
+      padding-left: $mobile-menu-mobile-submenu-toggle-width;
+    } 
+  }
+}  
+
+.mobile-menu--nav-item-submenu-toggle {
+  background-color: $color-white;
+  background-image: url('../images/arrow-right-black.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 7px 11px;
+  border-left: 1px solid $color-gray-light;
+  height: 51px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $mobile-menu-mobile-submenu-toggle-width;
+
+  &.open {
+    border: none;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  span {
+    @include element-invisible;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+.mobile-menu--nav-submenu {
+  @media (max-width: $breakpoint-notebook) {
+    background-color: $color-white;
+    height: 100%;
+    left: 100%;
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    top: 0;
+    transition: left 0.4s ease;
+    width: 100%;
+    z-index: 3;
+
+    &.open {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+.mobile-menu--nav-submenu.header--nav-submenu  {
+  @media (max-width: $breakpoint-notebook) {
+    width: calc(100% - #{$header-mobile-close-width});
+
+    &.open {
+      left: $header-mobile-close-width;
+    }
+  }
+}
+
+.mobile-menu--nav-submenu.footer--nav-submenu {
+  @media (max-width: $breakpoint-notebook) {
+    height: auto;
+    top: 0;
+    width: 100vw;
+
+    &.open {
+      // left: calc(-50vw + 50%);
+      left: 0;
+    }
+  }
+}
+
+.mobile-menu--nav-sub-li {
+  position: relative;
+}

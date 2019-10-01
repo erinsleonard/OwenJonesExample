@@ -1,0 +1,28 @@
+// Custom fonts
+
+@font-face {
+  font-family: 'nike_trade_gothic_365-roman';
+  src: url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nike_365-bold_condensed';
+  src: url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-bold_condensed.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-bold_condensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-bold_condensed.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-bold_condensed.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-bold_condensed.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-bold_condensed.svg#nike_trade_gothic_365-bold_condensed') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'nike_trade_gothic_365-light';
+  src: url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nike_trade_gothic_365/nike_trade_gothic_365-light.svg#nike_trade_gothic_365-light') format('svg'); /* Legacy iOS */
+}

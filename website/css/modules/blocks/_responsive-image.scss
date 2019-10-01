@@ -1,0 +1,26 @@
+// Responsive Image Block
+
+.block-responsiveimageblock {
+  margin-bottom: 5rem;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 7rem;
+  }
+}
+
+.responsive-image--desktop {
+  display: none;
+
+	@media (min-width: $breakpoint-notebook) {
+    display: block;
+  }
+}
+
+.responsive-image--mobile {
+  display: block;
+  
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}

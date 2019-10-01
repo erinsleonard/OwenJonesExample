@@ -1,0 +1,182 @@
+// contact form
+
+.page-title--intro--contact {
+  margin-bottom: 3em;
+
+  p {
+    margin-bottom: 1.6rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  strong {
+    // font-family: $font-trade-gothic-bold-condensed;
+    // font-weight: normal;
+  }
+}
+.page-title--intro--first-contact {
+  @media (max-width: $breakpoint-tablet) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+}
+
+.page-title--intro--contact.page-title--intro--connect-partner {
+  margin-bottom: 4.7rem;
+}
+
+.contact--form-title.contact--form-title--connect-partner {
+  @include section--title;
+  margin-top: 0;
+}
+
+// IE HACKS
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+  .contact--form-title.contact--form-title--connect-partner {
+    padding-top: 0;
+  }
+}
+@supports (-ms-ime-align: auto) { // MS EDGE
+  .contact--form-title.contact--form-title--connect-partner {
+    padding-top: 0;
+  }
+}
+
+.contact--select-group {
+  @include fancy-select(); 
+  select {
+    font-family: Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 18px;
+    }  
+
+    > option {
+      font-size: inherit;
+    }
+  }
+}
+
+.contact--form, #page .contact--form {
+  margin-bottom: 4rem;
+  text-align: left;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 6rem;
+  }  
+
+  label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0em;
+    line-height: 1.2em;
+    // letter-spacing: 0.02em;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 18px;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    @include fancy-textfield();
+    font-size: 16px;
+    line-height: 19px;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 18px;
+      line-height: 1em;
+    }    
+  }
+  textarea {
+    line-height: 1.2em;
+  }
+}
+
+.contact--info-group {
+  @media (min-width: $breakpoint-tablet) {
+    @include clearfix();
+  }
+  
+  label {
+    font-weight: normal;
+  }
+}
+
+.contact--name-group {
+  @media (min-width: $breakpoint-tablet) {
+    float: left;
+    padding-right: $gutter-side-tile;
+    width: 50%;
+  }
+
+  label {
+    font-weight: normal;
+  }
+}
+
+.contact--email-group {
+  @media (min-width: $breakpoint-tablet) {
+    float: left;
+    padding-left: $gutter-side-tile;
+    width: 50%;
+  }
+
+  label {
+    font-weight: normal;
+  }
+}
+.contact--question-group {
+  label {
+    font-weight: normal;
+  }
+}
+
+.contact--form .g-recaptcha {
+  margin-bottom: 35px;
+}
+
+.contact--submit-group {
+  text-align: center;
+}
+
+.contact--submit-button {
+  display: block;
+  margin: 0 auto;
+  max-width: 27.5rem; 
+  transition: all $transition-duration-default;
+  width: 100%;
+
+  &:focus,
+  &:active,
+  &:active:hover {
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+// Thank you
+.page-title--contact-thank-you-info-wrapper {
+  padding-bottom: 5rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: 9rem;
+  }
+}
+
+.page-title--contact-thank-you-wrapper {
+  text-align: center;
+}
+
+.page-title--contact-thank-you-image {
+  width: 90px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 130px;
+  }
+}

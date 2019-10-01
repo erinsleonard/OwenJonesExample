@@ -1,0 +1,113 @@
+// 
+// Base
+//
+// Base styles
+//
+
+body {
+  background-color: $color-bg;
+  color: $color-body;
+  font-family: $font-helvetica;
+  font-size: $base-font-size-mobile;
+  line-height: 17px;
+  overflow-x: hidden;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $base-font-size-desktop;
+    line-height: 1.2em;
+  }
+  // ATTEMPT TO FIX FONT RENDERING ISSUES
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+}
+
+a {
+  color: $color-body;
+  text-decoration: underline;
+  transition: all $transition-duration-default ease;
+
+  &:hover,
+  &:focus {
+    color: darken($color-body, 10%);
+    text-decoration: none;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @include base-headers();
+  margin-bottom: 0.75em;
+  margin-top: 1.25em;  
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 30px;
+  letter-spacing: 0;
+  margin-bottom: 0.5em;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 55px;
+    margin-bottom: 0.35em;    
+  }
+}
+
+h2 {
+  font-size: 23px;
+  margin-bottom: 0.5em;
+
+  @media (min-width: $breakpoint-tablet){
+    font-size: 28px;
+  }
+}
+
+h4,h5,h6 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+img,
+iframe {
+  height: auto;
+  max-width: 100%;
+}
+
+blockquote {
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 4rem;
+  position: relative;
+  
+  p {
+    position: relative;
+    z-index: 1;
+    // &:first-of-type {
+    //   &:before {
+    //     color: $color-fresh-turf;
+    //     content: "“";
+    //     display: block;
+    //     font-family: $font-trade-gothic-bold-condensed;
+    //     font-size: 230px;
+    //     left: -1.5rem;
+    //     line-height: 1em;
+    //     opacity: 0.4;
+    //     position: absolute;
+    //     top: -3.25rem;
+    //     z-index: -1;
+    //   }
+
+    // }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 28px;
+    padding-top: 6.5rem;
+
+    &:before {
+      font-size: 350px;
+      left: -2.25rem;
+      top: -4.45rem;
+    }
+  }
+}

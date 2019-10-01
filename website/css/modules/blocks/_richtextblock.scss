@@ -1,0 +1,23 @@
+// Rich text block styles
+.block-richtextblock {
+	margin-bottom: 4rem;
+
+	@media (min-width: $breakpoint-tablet) {
+		margin-bottom: 6rem;
+	}
+}
+.richtextblock--content--no-bottom-padding { 
+	margin-bottom: -3rem;
+	
+	@media (min-width: $breakpoint-tablet) {
+		margin-bottom: -5rem;
+	}
+	
+	p {
+		@media (max-width: $breakpoint-tablet) {
+			font-size: 16px;
+			line-height: 19px;
+		}	
+	}
+
+}

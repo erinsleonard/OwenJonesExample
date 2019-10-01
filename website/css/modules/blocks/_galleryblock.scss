@@ -1,0 +1,156 @@
+// Gallery block
+$gallery-mobile-height: 278px;
+$gallery-desktop-height: 615px;
+$gallery-desktop-text-width: 800px;
+$gallery-mobile-prevnext-width: 40px;
+$gallery-desktop-prevnext-width: 80px;
+
+.block-galleryblock {
+  margin-bottom: 5rem;
+  margin-left: -$gutter-side-mobile + $gutter-side-tile;
+  margin-right: -$gutter-side-mobile + $gutter-side-tile;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (max-width: $breakpoint-notebook) {
+    width: 100vw;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 7rem;
+    margin-left: -$gutter-side-tablet + $gutter-side-tile;
+    margin-right: -$gutter-side-tablet + $gutter-side-tile;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    padding-left: $gutter-side-tile;
+    padding-right: $gutter-side-tile;
+
+    &.col-md-12 {
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      padding-left: 0;
+      padding-right: 0;
+      width: 100vw;
+    }
+  }
+}
+
+.gallery--wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery--inner {
+
+}
+
+.gallery--item {
+  height: $gallery-mobile-height;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $breakpoint-notebook) {
+    height: $gallery-desktop-height;
+  }
+}
+
+.gallery--link {
+  display: block;
+
+  &:focus {
+    outline: 4px solid #4D90FE;
+    outline-offset: -4px;
+  }
+}
+
+.gallery--item-primary {
+  height: $gallery-mobile-height;
+
+  @media (min-width: $breakpoint-notebook) {
+    height: $gallery-desktop-height;
+  }
+}
+
+.gallery--item-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery--item-secondary {
+  bottom: 0;
+  color: $color-white;  
+  left: 0;
+  padding-bottom: 1rem;
+  position: absolute;
+  text-align: center;  
+
+  @media (min-width: $breakpoint-notebook) {
+    padding-bottom: 3rem;
+  }
+}
+
+// Text
+.gallery--item-title {
+  font-size: 18px;
+  padding-left: $gallery-mobile-prevnext-width + 15px;
+  padding-right: $gallery-mobile-prevnext-width + 15px;
+  text-shadow: 0 0 4px $color-black;  
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $gallery-desktop-text-width;
+    padding-left: 0;
+    padding-right: 0; 
+  }
+}
+
+.gallery--item-caption {
+  font-size: 14px;
+  padding-left: $gallery-mobile-prevnext-width + 15px;
+  padding-right: $gallery-mobile-prevnext-width + 15px;  
+  text-shadow:  0 0 4px $color-black;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: 18px;
+    margin: 0 auto;   
+    max-width: $gallery-desktop-text-width; 
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Prev/Next buttons
+.gallery--prev-next {
+  background-color: rgba(0,0,0,0.3);
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  background-position: center center;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  width: $gallery-mobile-prevnext-width;
+
+  span {
+    @include element-invisible;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    background-size: 45px;
+    width: $gallery-desktop-prevnext-width;
+  }
+}
+
+.gallery--prev-next--prev {
+  background-image: url('../images/arrow-left.png');
+  left: 0;
+}
+
+.gallery-prev-next--next {
+  background-image: url('../images/arrow-right.png');
+  right: 0;
+}

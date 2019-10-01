@@ -1,0 +1,13 @@
+// Page-level elements
+
+#page {
+  background-color: $color-white;
+
+  .homepage & {
+  	position: relative;
+
+  	@media (min-width: $breakpoint-notebook) {
+  		flex: 1 1 auto;
+  	}
+  }
+}

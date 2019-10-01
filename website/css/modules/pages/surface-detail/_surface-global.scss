@@ -1,0 +1,31 @@
+// Surfaces Global
+
+.page-title.page-title--surface {
+  margin-bottom: 0;
+}
+
+.page-title--inner.page-title--inner--surface {
+  max-width: 520px;
+}
+
+.surface--product-options {
+  margin-top: 4rem;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-top: 7rem;
+  }
+}
+
+.section--intro {
+  .surface--product-options & {
+    @media (min-width: $breakpoint-notebook) {
+      margin-bottom: 6.5rem;
+    }
+  }
+}
+
+.block-pagesectionblock {
+  .surface--product-options & {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,14 @@
+// Asset block styles
+.block-assetblock {
+	 margin-bottom: 4rem;
+  
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 6rem;
+  }
+}
+
+.ombuassets-image-align-center {
+  .assetblock--asset & {
+    text-align: center;
+  }
+}

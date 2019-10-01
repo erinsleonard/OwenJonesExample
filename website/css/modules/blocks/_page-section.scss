@@ -1,0 +1,119 @@
+// Page sections
+
+$desktop-section-max-width: 775px;
+
+.block-pagesectionblock {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  margin-bottom: 4.5rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 8rem;
+  }
+
+  .page--blocks-section--last & {
+    border-bottom: none;
+    margin-bottom: 4.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 5.5rem;
+    }
+  }
+}
+
+.page--blocks-section, .block-pagesectionblock {
+  &.pagesection--white-on-black {
+    background:#000;
+    color: #FFF;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    
+    margin-top: -4.5rem;
+    padding-top: 4.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: -8rem;
+      padding-top: 8rem;
+    }
+
+    h2 {
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+    
+    a {
+      color: #FFF;
+    }
+    
+    .btn-primary {
+      color: #111;
+      background: #ebeaea;
+      &:hover {
+        background: #d0cfcf;
+      }
+    }
+
+    .section--intro {
+      font-size: 16px;
+      line-height: 19px;
+      
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+    }
+
+  }
+}
+
+
+.section--title {
+  @include section--title;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// IE HACKS
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+  .section--title {
+    padding-top: 0;
+  }
+}
+@supports (-ms-ime-align: auto) { // MS EDGE
+  .section--title {
+    padding-top: 0;
+  }
+}
+
+.section--intro {
+  font-size: 16px;
+  line-height: 1.2em;
+  margin-bottom: 2.5em;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-left: 25px;
+    padding-right: 25px;
+  } 
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $desktop-section-max-width;
+    padding-left: 0;
+    padding-right: 0;
+  }  
+}

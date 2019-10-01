@@ -1,0 +1,441 @@
+// Surfaces Block
+$surface-item-notebook-width: 250px;
+$surface-item-desktop-width: 338px;
+
+.block-surfaceblock  {
+  margin-bottom: 4rem;
+
+  @media (min-width: $breakpoint-notebook) {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    margin-bottom: 7rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.surfaces--title {
+  @include section--title;
+
+  padding-top: 1.5em;
+  margin-bottom: 0.75em;
+  margin-top: -1.75em;
+
+  // larger than tablet
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 1.5em;
+    margin-bottom: 0.75em;
+    margin-top: -2.25em;
+  }
+
+  // larger than notebook
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: 0.85em;
+    margin-top: -.25em;
+  }
+}
+
+.surfaces--title.surfaces--title--connect-partner {
+  margin-bottom: 0.5em;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: 0.5em;
+  }  
+}
+
+.surfaces--content {
+  margin-left: -$gutter-side-mobile;
+  margin-right: -$gutter-side-mobile;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $surface-item-notebook-width * 3 + 90px;
+    @include clearfix();
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: $surface-item-desktop-width * 3 + 90px;
+  }  
+}
+
+.surfaces--item {
+  margin-bottom: 0.4rem;
+  position: relative;
+
+  @media (min-width: $breakpoint-notebook) {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+
+    // 1 surface
+    &:nth-last-child(1):first-child {
+      left: $surface-item-notebook-width + 30px;
+
+      @media (min-width: $breakpoint-desktop) {
+        left: $surface-item-desktop-width + 30px; 
+      }
+    }
+
+    // 2 surfaces
+    &:nth-last-child(2):first-child, 
+    &:nth-last-child(2):first-child ~ .surfaces--item { 
+      left: ($surface-item-notebook-width / 2 ) + 15;
+
+      @media (min-width: $breakpoint-desktop) {
+        left: ($surface-item-desktop-width / 2) + 16;
+      }      
+    }
+
+    // 3 surfaces
+    &:nth-last-child(3):first-child, 
+    &:nth-last-child(3):first-child ~ .surfaces--item { 
+    }
+
+    // 4 surfaces
+    &:nth-last-child(4):first-child, 
+    &:nth-last-child(4):first-child ~ .surfaces--item { 
+      left: ($surface-item-notebook-width / 2) + 15;
+
+      &:nth-child(3) {
+        clear: left;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        left: ($surface-item-desktop-width / 2) + 16;
+      }
+    }
+
+    // 5 surfaces
+    &:nth-last-child(5):first-child, 
+    &:nth-last-child(5):first-child ~ .surfaces--item { 
+      &:nth-child(1),
+      &:nth-child(2) {
+        left: ($surface-item-notebook-width / 2) + 15;
+
+        @media (min-width: $breakpoint-desktop) {
+          left: ($surface-item-desktop-width / 2) + 16; 
+        }
+      }
+
+      &:nth-child(3) {
+        clear: left;
+      }
+    }   
+
+    // 6 surfaces
+    &:nth-last-child(6):first-child, 
+    &:nth-last-child(6):first-child ~ .surfaces--item { 
+    }    
+
+    // 7 surfaces
+    &:nth-last-child(7):first-child, 
+    &:nth-last-child(7):first-child ~ .surfaces--item { 
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(6),
+      &:nth-child(7) {
+        left: ($surface-item-notebook-width / 2) + 15;
+
+        @media (min-width: $breakpoint-desktop) {
+          left: ($surface-item-desktop-width / 2) + 16;
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        clear: left;
+      }      
+    }    
+
+    // 8 surfaces
+    &:nth-last-child(8):first-child, 
+    &:nth-last-child(8):first-child ~ .surfaces--item {
+      &:nth-child(1),
+      &:nth-child(2) {
+        left: ($surface-item-notebook-width / 2) + 15;
+
+        @media (min-width: $breakpoint-desktop) {
+          left: ($surface-item-desktop-width / 2) + 16;
+
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        clear: left;
+      }
+    }    
+
+    // 9 surfaces
+    &:nth-last-child(9):first-child, 
+    &:nth-last-child(9):first-child ~ .surfaces--item { 
+    }
+
+    // 10 surfaces
+    &:nth-last-child(10):first-child, 
+    &:nth-last-child(10):first-child ~ .surfaces--item { 
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(9),
+      &:nth-child(10) {
+        left: ($surface-item-notebook-width / 2) + 15;
+
+        @media (min-width: $breakpoint-desktop) {
+          left: ($surface-item-desktop-width / 2) + 16;
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(9) {
+        clear: left;
+      }      
+    }    
+
+    // 11 surfaces
+    &:nth-last-child(11):first-child, 
+    &:nth-last-child(11):first-child ~ .surfaces--item { 
+      &:nth-child(1),
+      &:nth-child(2) {
+        left: ($surface-item-notebook-width / 2) + 15;
+
+        @media (min-width: $breakpoint-desktop) {
+          left: ($surface-item-desktop-width / 2) + 16;
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(9) {
+        clear: left;
+      }       
+    }    
+
+    // 12 surfaces
+    &:nth-last-child(12):first-child, 
+    &:nth-last-child(12):first-child ~ .surfaces--item { 
+    }                                 
+  } 
+}
+
+.surfaces--link {
+  background-size: cover;
+  color: $color-white;
+  display: flex;
+  font-family: $font-trade-gothic-bold-condensed;
+  font-size: 22px;
+  height: 100px;
+  letter-spacing: $header-letter-spacing;
+  line-height: 1.1;
+  padding-left: $gutter-side-mobile;
+  padding-right: $gutter-side-mobile;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all $transition-duration-default ease 0s;
+  display: block;
+
+  &:before {
+    background-color: $color-white;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  span {
+    align-self: center;
+    display: block;
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    width: 100%;
+    z-index: 2;
+    padding-top: .33em;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: 28px;
+    line-height: 1em;
+    height: 160px;
+    width: $surface-item-notebook-width;      
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 190px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: $surface-item-desktop-width;      
+  }  
+
+  &:hover {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &.active,
+  .surfaces--item.hover & {    
+    color: $color-body;
+    text-decoration: none;
+
+    &:before {
+      opacity: 0.5;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-body;
+    }
+  }
+
+  .surfaces--partner-form & {
+    &.active {
+      &:after {
+        background-image: url('../images/checkmark.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        content: "";
+        height: 34px;
+        left: 50%;
+        position: absolute;
+        bottom: 10px;
+        z-index: 1;
+        // top: calc(100% + 12px);
+        transform: translateX(-50%);
+        width: 34px;
+
+        @media (max-width: $breakpoint-notebook) {
+          height: 24px;
+          // top: calc(100% + 7px);
+          width: 24px;
+        }
+      }
+    }
+  }
+
+}
+
+// IE HACKS
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+  .surfaces--link span {
+    padding-top: .1em;
+  }
+}
+@supports (-ms-ime-align: auto) { // MS EDGE
+  .surfaces--link span {
+   padding-top: .1em;
+ }
+}
+
+// Surfaces link with external link
+.surfaces--link.surfaces--link--ext {
+  .surfaces--partner-form & {
+    &.active {
+
+      span {
+        // display: none;
+
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.surfaces--ext-link-wrapper {
+  bottom: 0;
+  display: none;
+  font-family: $font-trade-gothic-bold-condensed;
+  font-size: 18px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+
+  &:before {
+    background-color: $color-white;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all $transition-duration-default ease;    
+    width: 100%;
+    z-index: 1;
+  }  
+
+  a,span {
+    display: block;
+  }
+
+  .surfaces--partner-form .surfaces--link.surfaces--link--ext.active + & {
+    // display: block;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: 28px;   
+
+    .surfaces--partner-form .surfaces--link.surfaces--link--ext.active + & {
+      align-items: center;
+      // display: flex;
+    }
+  }  
+}
+
+.surfaces--ext-link-inner {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  @media (max-width: $breakpoint-notebook) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.surface--ext-link-message {
+  font-size: 14px;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: 20px;
+  }
+}
+
+.surface--ext-link-link {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

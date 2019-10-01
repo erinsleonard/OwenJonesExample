@@ -1,0 +1,53 @@
+/**
+ * Theme Colors
+ *
+ * Named with http://chir.ag/projects/name-that-color
+ */
+
+// Colors
+$color-gray-dark: rgb(17, 17, 17);
+$color-green: rgb(67, 176, 43);
+$color-bg: rgb(26, 26, 26);
+// $color-body: rgb(57, 53, 50);
+$color-body: #111;
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0,0,0);
+$color-white-dark: rgb(187, 187, 187);
+$color-fresh-turf: rgb(171, 209, 83);
+$color-orange: rgb(250, 84, 0);
+$color-moonshot: rgb(0, 58, 112);
+$color-track-spike: rgb(156, 165, 174);
+$color-gray-light: rgb(225, 228, 231);
+$color-gray-xtra-light: rgb(235, 235, 235);
+
+// Custom fonts
+$font-trade-gothic-roman: "nike_trade_gothic_365-roman", Helvetica, sans-serif;
+$font-trade-gothic-bold-condensed: "nike_365-bold_condensed", Helvetica, sans-serif;
+$font-trade-gothic-light: "nike_trade_gothic_365-light", Helvetica, sans-serif;
+$font-helvetica: Helvetica, sans-serif;
+
+// Transition effects
+$transition-duration-default: 0.2s;
+
+// Gutters and breakpoints
+$gutter-side-tile: 15px;
+$gutter-side-mobile: 20px;
+$gutter-side-tablet: 30px;
+$gutter-side-desktop: 30px;
+
+$breakpoint-tablet: 768px;
+$breakpoint-notebook: 992px;
+$breakpoint-desktop: 1200px;
+
+$max-site-width: 1505px;
+
+// Various helper variables
+$header-letter-spacing: 0em;
+// $header-letter-spacing: 0.075em;
+$base-font-size-mobile: 14px;
+$base-font-size-desktop: 20px;
+$header-desktop-height: 72px;
+$header-mobile-height: 50px;
+$header-logo-width: 46px;
+$header-mobile-close-width: 35px;
+$mobile-menu-mobile-submenu-toggle-width: 4.3rem;

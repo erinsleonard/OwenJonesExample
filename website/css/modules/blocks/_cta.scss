@@ -1,0 +1,36 @@
+// CTA blocks
+
+.cta--content {
+  display: inline-block;
+}
+
+.block-calltoactionblock {
+  margin-bottom: 2rem;
+  text-align: center;
+  
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 6rem;
+  }
+}
+
+.cta--text {
+  margin-bottom: 1.25em;
+}
+
+.cta--link {
+  @include btn();
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  .cta-green & {
+    @include btn($color-fresh-turf, $color-body);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    .cta--text & {
+      width: 80%;
+    }
+  }
+}

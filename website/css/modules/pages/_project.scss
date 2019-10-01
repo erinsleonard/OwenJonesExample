@@ -1,0 +1,73 @@
+// Project Page
+
+.page-title.page-title--project {
+  margin-bottom: 3.5rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 5.5rem;
+  }
+}
+
+.page-title--title--project {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  max-width: 900px;
+
+  @media (min-width: $breakpoint-tablet) {
+    // margin-bottom: 0.1em;
+    margin-bottom: -2px
+  }
+}
+.page-title--inner--project {
+  margin-top: 47px;
+  margin-bottom: 61px;
+}
+@media all and (-ms-high-contrast:none) {
+   /* IE10 */
+   .page-title--inner--project { 
+    margin-top: 38px;
+  } 
+}
+@supports (-ms-ime-align: auto) {
+   .page-title--inner--project { 
+     margin-top: 38px;
+   } 
+}
+
+ .page-title--intro--project {
+  font-family: $font-trade-gothic-bold-condensed;
+  font-size: 18px;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 28px;
+    line-height: 1em;
+    margin-bottom: 5.5rem;
+  }
+}
+
+.page-title--intro--project.page-title--intro--surface-type {
+  margin-bottom: 0;
+}
+
+.page-title--banner {
+  height: 300px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 650px;
+  }
+}
+.page-title--banner--project {
+  background-size: cover;
+  background-position: 50% 50%;
+  img {
+    visibility: hidden;
+  }
+}

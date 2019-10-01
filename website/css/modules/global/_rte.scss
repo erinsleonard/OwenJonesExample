@@ -1,0 +1,124 @@
+// Rich Text Styles
+.rte {
+  a {
+    // font-weight: 700;
+    font-weight: inherit;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  .lead {
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    font-weight: normal;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 320px;
+    }
+  }
+
+  ul {
+    list-style: none outside none;
+    padding-left: 0;
+    font-size: inherit;
+    line-height: inherit;
+
+    li {
+      padding-left: 9px;
+      position: relative;
+      margin-bottom: .25em;
+
+      &:before {
+        content: "\2022";
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  blockquote {
+    &,
+    &.pull-left,
+    &.pull-right {
+      border: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .ombuassets-document {
+    @include btn();
+    padding: 1.5rem;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+
+    .type {
+      font-size: 0.65em;
+    }
+  }
+
+  .pull-center {
+    text-align: center;
+    
+    img {
+      margin-bottom: 2rem;
+    }
+  } 
+
+  @media (max-width: $breakpoint-tablet) {
+    .pull-left {
+      float: none !important;
+    }
+
+    .pull-right {
+      float: none !important;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    .pull-left,
+    .pull-right,
+    .ombuassets-image-align-left,
+    .ombuassets-image-align-right,
+    .ombuassets-document-left,
+    .ombuassets-document-right {
+      margin-bottom: 1rem;
+      max-width: 350px;
+    }
+
+    .ombuassets-document-left,
+    .ombuassets-document-right {
+      width: 350px;    
+    }
+
+    .pull-left,
+    .ombuassets-image-align-left,
+    .ombuassets-document-left {
+      clear: left;
+      float: left;
+      margin-right: 3rem;
+    }
+
+    .pull-right,
+    .ombuassets-image-align-right,
+    .ombuassets-document-right {
+      clear: right;
+      float: right;
+      margin-left: 3rem;
+    }
+  }
+}

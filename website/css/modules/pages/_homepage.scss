@@ -1,0 +1,218 @@
+// Homepage
+
+.homepage {
+  padding-bottom: 1rem;
+  .header--admin-central {
+    z-index: 3;
+  }
+}
+
+.homepage--primary {
+  max-height: 620px;
+  height: 42rem;
+  position: relative;
+  margin-bottom: 4.5rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 84rem;
+    margin-bottom: 7rem;
+  }
+}
+
+
+.homepage--background {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+
+  img {
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+  }
+  video {
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    object-fit: cover;
+    min-width: 100%;
+
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    img {
+      display: block;
+    }
+    
+    video {
+      display: none;
+    }
+  }  
+
+  @media (min-width: $breakpoint-tablet) {
+    img {
+      display: none;
+    }
+
+    video {
+      display: block;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+    img {
+      height: auto;
+      left: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+    }
+    video {
+      height: auto;
+      left: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      position: absolute;
+      top: unset;
+      transform: translateX(-50%);
+      width: auto;
+    }
+  }
+}
+
+.homepage--video-label {
+  @include element-invisible;
+}
+
+.homepage--foreground {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+
+  @media (min-width: $breakpoint-notebook) {
+
+  }
+}
+
+.homepage--foreground-inner {
+  left: 50%;
+  padding-left: $gutter-side-tile;
+  padding-right: $gutter-side-tile;
+  position: absolute;
+  top: calc(50% + 1px);
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-left: 0;
+    padding-right: 0;
+    top: calc(50% + 3px);
+    width: 620px;
+  }
+}
+
+// For homepage title styles see modules/global/_page-title.scss
+
+.homepage--logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+
+
+  span {
+    @include element-invisible();
+  }
+
+  svg {
+    height: 62px;    
+    width: 111px;
+
+    * {
+      fill: $color-white;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    svg {
+      height: 105px;
+      width: 215px; 
+    }
+  }  
+}
+
+.page-title--title.page-title--title--homepage {
+  color: $color-white;
+  font-size: 36px;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 75px;
+    line-height: 1;
+    margin-top: 3rem;    
+  }
+}
+
+.page-title--intro.page-title--intro--homepage {
+  color: $color-white;
+  margin-bottom: 0;
+
+  &,p {
+    font-family: $font-trade-gothic-bold-condensed;    
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1em;
+    
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 20px;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $color-white;
+
+    &:focus,
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
+
+// .homepage {
+//   h2 {
+//     font-size: 24px;
+//     line-height: 1em;
+//   }
+// }
